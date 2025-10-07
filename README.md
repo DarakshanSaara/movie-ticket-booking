@@ -248,3 +248,24 @@ Test Endpoints:
 All protected endpoints will now work
 
 Try booking seats, viewing bookings, etc.
+
+### For Testing (Command Prompt)
+# Test 1: User Registration
+```
+curl -X POST http://localhost:8000/api/signup/ -H "Content-Type: application/json" -d "{\"username\": \"testuser\", \"email\": \"test@example.com\", \"password\": \"testpass123\", \"first_name\": \"Test\", \"last_name\": \"User\"}"
+```
+Response:
+```
+{"user":{"username":"testuser","email":"test@example.com","first_name":"Test","last_name":"User"},"refresh":"eyJh.....","access":"eyJh....."}
+```
+# Test 2: User Login
+```
+curl -X POST http://localhost:8000/api/login/ -H "Content-Type: application/json" -d "{\"username\": \"testuser\", \"password\": \"testpass123\"}"
+```
+Response:
+```
+{
+    "refresh": "eyJhbGci...",
+    "access": "eyJhbGci..."
+}
+```
