@@ -11,6 +11,11 @@ from .serializers import (
     MovieSerializer, ShowSerializer, BookingSerializer, BookingCreateSerializer
 )
 
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def health_check(request):
+    return Response({"status": "success", "message": "API is working!"})
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def signup(request):
