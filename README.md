@@ -269,3 +269,11 @@ Response:
     "access": "eyJhbGci..."
 }
 ```
+# Test the Health Check Endpoint
+```
+curl http://localhost:8000/api/health/
+```
+Response:
+```
+{"status": "success", "message": "API is working!"}
+```
