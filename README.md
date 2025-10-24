@@ -1,4 +1,4 @@
-# Movie Ticket Booking System
+## Movie Ticket Booking System
 
 A Django REST Framework based backend system for movie ticket booking with JWT authentication.
 
